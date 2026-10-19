@@ -204,7 +204,7 @@ button {
 /*============================================================ */
 
 /*=========================================
-        PLATFORM SECTION    
+        PLATFORM   
 ===========================================*/
 .platform_container {
   display: grid;
@@ -267,6 +267,221 @@ button {
   background-color: #0e92a4;
 }
 /*=============================================================================*/
+.main {
+  padding-right: clamp(180px, 9.16vw, 185px);
+  padding-bottom: clamp(123px, 8.14vw, 123px);
+  padding-left: clamp(158px, 10.45vw, 158px);
+}
+
+/*=========================================
+        EVENTS - SECTION
+===========================================*/
+.events_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.events_header__container {
+  display: flex;
+  align-items: center;
+}
+
+.events_header__container > h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.events_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  border-radius: 8px;
+  background-color: #97cad11f;
+}
+
+.events_btn > h2 {
+  margin: 0;
+  padding: 12px 8px 9px 12px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.events_btn > span {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 0;
+}
+
+.events_btn > span img {
+  width: 22px;
+  height: 22px;
+}
+
+.events_link__container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.events_link {
+  color: #00798a;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+/* ======================
+   Сетка карточек
+   ======================*/
+
+.events_grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 36px;
+  row-gap: 36px;
+  width: 100%;
+}
+
+/* ======================
+   Карточка события
+   ======================*/
+
+.events_card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 30px;
+  border-radius: 4px;
+}
+
+.event_card__image {
+  display: block;
+  width: 272px;
+  height: 153px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.events_card__title {
+  margin: 12px 0 0;
+  padding: 0 16px 0 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.events_card__category {
+  margin: 16px 0 0;
+  padding: 0;
+  color: #707070;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.events_card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 11px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.35px;
+}
+
+.events_card__meta .events_icon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.events_card__footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.events_card__footer > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #212121;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.events_card__footer > span .events_icon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+}
+
+/* =======================
+   Online Event
+   =======================*/
+.events_online {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px 0;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.events_online__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.events_footer {
+  margin: 0;
+}
+
+.events_footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 40px 0 24px;
+}
+
+.events_footer__container > h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.events_footer__link {
+  display: flex;
+  align-items: center;
+}
+
+/* На десктопе мобильный список скрыт */
+.events_mobil {
+  display: none;
+}
+/*===========================================================*/
 
 /*===========================================
         Экраны от 1024px до 1439px
@@ -301,16 +516,14 @@ button {
   }
 
   /*=========================================
-        PLATFORM SECTION    
+        PLATFORM     
 ===========================================*/
   .platform_container {
     grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
-
     padding-top: clamp(50px, 4.6vw, 69px);
     padding-right: clamp(140px, 14vw, 280px);
     padding-bottom: clamp(75px, 8.1vw, 123px);
     padding-left: clamp(75px, 10.45vw, 158px);
-
     gap: clamp(32px, 3.05vw, 46px);
   }
 
@@ -335,6 +548,99 @@ button {
     height: auto;
     aspect-ratio: 379 / 269;
   }
+
+  .main {
+    padding-right: clamp(110px, 5vw, 180px);
+    padding-bottom: clamp(75px, 8.1vw, 123px);
+    padding-left: clamp(75px, 10.45vw, 158px);
+  }
+
+  /*=========================================
+        EVENTS - SECTION
+=============================================*/
+  .events_header {
+    margin-bottom: clamp(20px, 1.67vw, 24px);
+  }
+
+  .events_header__container > h2 {
+    font-size: clamp(22px, 1.95vw, 28px);
+    line-height: clamp(28px, 2.5vw, 36px);
+  }
+
+  .events_btn {
+    margin-left: clamp(6px, 0.56vw, 8px);
+  }
+
+  .events_btn > span img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .events_btn > h2 {
+    padding: 9px 7px 7px 10px;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(20px, 1.67vw, 24px);
+  }
+
+  .events_grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: clamp(16px, 2.5vw, 36px);
+    row-gap: clamp(28px, 2.5vw, 36px);
+  }
+
+  .events_card {
+    padding-bottom: clamp(24px, 2.08vw, 30px);
+  }
+
+  .event_card__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 272 / 153;
+  }
+
+  .events_card__title {
+    margin-top: clamp(9px, 0.83vw, 12px);
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(19px, 1.67vw, 24px);
+  }
+
+  .events_card__category {
+    margin-top: clamp(12px, 1.11vw, 16px);
+    font-size: clamp(12px, 0.97vw, 14px);
+    line-height: clamp(17px, 1.39vw, 20px);
+  }
+
+  .events_card__meta {
+    gap: 6px;
+    margin-top: clamp(8px, 0.76vw, 11px);
+    margin-bottom: 12px;
+    font-size: clamp(12px, 0.97vw, 14px);
+    line-height: clamp(17px, 1.39vw, 20px);
+  }
+
+  .events_card__meta .events_icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .events_card__footer {
+    gap: clamp(10px, 1.11vw, 16px);
+  }
+
+  .events_card__footer > span {
+    font-size: clamp(13px, 1.11vw, 16px);
+    line-height: clamp(19px, 1.67vw, 24px);
+  }
+
+  .events_footer__container {
+    margin-top: clamp(32px, 2.78vw, 40px);
+    margin-bottom: clamp(18px, 1.67vw, 24px);
+  }
+
+  .events_footer__container > h2 {
+    font-size: clamp(22px, 1.95vw, 28px);
+    line-height: clamp(28px, 2.5vw, 36px);
+  }
 }
 
 /*==========================================
@@ -356,7 +662,7 @@ button {
   }
 
   /*=========================================
-        PLATFORM SECTION    
+        PLATFORM     
 ===========================================*/
   .platform_container {
     grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
@@ -387,6 +693,100 @@ button {
     width: clamp(230px, 29.3vw, 300px);
     height: auto;
     aspect-ratio: 379 / 269;
+  }
+
+  .main {
+    padding-right: clamp(50px, 4.7vw, 140px);
+    padding-bottom: clamp(55px, 7.35vw, 74px);
+    padding-left: clamp(45px, 8.2vw, 74px);
+  }
+
+  /*=========================================
+        EVENTS - SECTION
+===========================================*/
+  .events_header {
+    margin-bottom: 20px;
+  }
+
+  .events_header__container > h2 {
+    font-size: clamp(20px, 2.15vw, 22px);
+    line-height: clamp(26px, 2.73vw, 28px);
+  }
+
+  .events_btn > h2 {
+    padding: 8px 6px 6px 9px;
+    font-size: clamp(14px, 1.56vw, 16px);
+    line-height: 20px;
+  }
+
+  .events_btn > span img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .events_link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .events_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(16px, 2.34vw, 24px);
+    row-gap: 32px;
+  }
+
+  .events_card {
+    padding-bottom: 24px;
+  }
+
+  .event_card__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 272 / 153;
+  }
+
+  .events_card__title {
+    margin-top: 10px;
+    font-size: clamp(15px, 1.76vw, 18px);
+    line-height: clamp(18px, 1.95vw, 20px);
+  }
+
+  .events_card__category {
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .events_card__meta {
+    margin-top: 9px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .events_card__meta .events_icon,
+  .events_card__footer > span .events_icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .events_card__footer {
+    gap: 12px;
+  }
+
+  .events_card__footer > span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .events_footer__container {
+    margin-top: 36px;
+    margin-bottom: 20px;
+  }
+
+  .events_footer__container > h2 {
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 
@@ -463,7 +863,7 @@ button {
   }
 
   /*=========================================
-        PLATFORM SECTION    
+        PLATFORM     
 ===========================================*/
   .platform_container {
     display: flex;
@@ -517,6 +917,123 @@ button {
     width: clamp(215px, 45vw, 330px);
     height: auto;
     aspect-ratio: 379 / 269;
+  }
+
+  .main {
+    padding-right: clamp(24px, 5vw, 49px);
+    padding-bottom: clamp(21px, 4.5vw, 54px);
+    padding-left: clamp(24px, 5vw, 44px);
+  }
+
+  /*=========================================
+        EVENTS - SECTION
+===========================================*/
+  .events_header {
+    margin-bottom: 16px;
+  }
+
+  .events_header__container > h2 {
+    font-size: clamp(18px, 2.8vw, 22px);
+    line-height: clamp(24px, 3.5vw, 28px);
+  }
+
+  .events_btn {
+    margin-left: 5px;
+  }
+
+  .events_btn > span img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .events_btn > h2 {
+    padding: 7px 5px 6px 8px;
+    font-size: clamp(13px, 2vw, 16px);
+    line-height: 18px;
+  }
+
+  .events_link__container,
+  .events_footer__link {
+    display: none;
+  }
+
+  .events_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 28px;
+  }
+
+  .events_card {
+    padding-bottom: 20px;
+  }
+
+  .event_card__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 272 / 153;
+  }
+
+  .events_card__title {
+    margin-top: 9px;
+    padding-right: 4px;
+    font-size: clamp(13px, 2.2vw, 16px);
+    line-height: clamp(16px, 2.5vw, 19px);
+  }
+
+  .events_card__category {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .events_card__meta {
+    gap: 4px;
+    margin-top: 8px;
+    margin-bottom: 9px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .events_card__meta .events_icon,
+  .events_card__footer > span .events_icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .events_card__footer {
+    gap: 8px;
+  }
+
+  .events_card__footer > span {
+    gap: 2px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .events_online {
+    top: 4px;
+    left: 6px;
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .events_online__icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .events_footer__container {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  .events_footer__container > h2 {
+    font-size: clamp(18px, 2.8vw, 22px);
+    line-height: 26px;
+  }
+
+  .events_mobil {
+    display: none;
   }
 }
 
@@ -600,7 +1117,7 @@ button {
   }
 
   /*=========================================
-        PLATFORM SECTION    
+        PLATFORM     
 ===========================================*/
   .platform_container {
     display: flex;
@@ -660,5 +1177,145 @@ button {
     height: 153px;
     max-width: 100%;
     object-fit: contain;
+  }
+
+  .main {
+    padding-top: 0;
+    padding-right: 15px;
+    padding-left: 14px;
+  }
+
+  /*=========================================
+        EVENTS - SECTION
+===========================================*/
+  .events_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .events_header__container > h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .events_btn {
+    margin-left: 5px;
+  }
+
+  .events_btn > h2 {
+    padding: 6px 5px 5px 8px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .events_btn > span {
+    padding-right: 8px;
+  }
+
+  .events_btn > span img {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Ссылка See all events полностью убирается */
+  .events_link__container,
+  .events_footer__link {
+    display: none;
+  }
+
+  /* Большая сетка карточек скрывается */
+  .events_grid {
+    display: none;
+  }
+
+  /* Мобильный список показывается */
+  .events_mobil {
+    display: block;
+  }
+
+  /* Разделительная полоска между мобильными карточками */
+  .events_card__stripe {
+    width: 100%;
+    margin: 0 0 10px;
+    border: 1px solid #d9d9d9;
+  }
+
+  .events_card__mobil {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+
+    width: 100%;
+    margin: 10px 0 21px;
+  }
+
+  .events_mobil__image {
+    flex: 0 0 97px;
+    width: 97px;
+    height: 55px;
+    object-fit: cover;
+  }
+
+  .events_mobil__info {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .events_mobil__info > h4 {
+    margin: 0;
+    color: #7c6f50;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .events_mobil__info > h3 {
+    margin: 2px 0 0;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .events_mobil__info > p {
+    margin: 0;
+    color: #707070;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .events_modil__online {
+    display: block;
+    width: auto;
+    max-width: 70px;
+    height: auto;
+    margin-top: 3px;
+  }
+
+  .events_mobil__attendees {
+    margin: 17px 0 21px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+  }
+
+  .events_footer {
+    margin: 0;
+  }
+
+  .events_footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 32px 0 16px;
+  }
+
+  .events_footer__container > h2 {
+    font-size: 20px;
+    line-height: 25px;
   }
 }
