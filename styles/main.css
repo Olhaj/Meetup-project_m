@@ -20,9 +20,9 @@ a {
   text-decoration: none;
 }
 
-/* =================================
+/*===================================
         HEADER
-   ================================= */
+=====================================*/
 .header {
   display: flex;
   justify-content: center;
@@ -195,4 +195,209 @@ button {
   border-radius: 8px;
   border: 1px solid #00798a;
   background-color: #00798a;
+}
+
+/*===========================================
+        Экраны от 1024px до 1440px
+=============================================*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /*===========================================
+            HEADER
+=============================================*/
+  .header {
+    padding: 12px 24px;
+  }
+
+  .logo {
+    margin-right: 24px;
+  }
+
+  .search_bar {
+    flex: 1 1 auto;
+    width: 50%;
+    max-width: 480px;
+  }
+
+  .search_left,
+  .search_right {
+    min-width: 0;
+    flex: 1 1 50%;
+  }
+
+  .navigation {
+    gap: 14px;
+    margin-right: 0;
+  }
+}
+
+/*==========================================
+        Экраны от 768px до 1023px
+============================================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  /*==========================================
+        HEADER
+============================================*/
+  .header {
+    padding-top: clamp(5.7px, calc(0.4584vw + 2.198px), 6.9px);
+    padding-right: clamp(17.6px, calc(2.816vw - 4.067px), 24.8px);
+    padding-bottom: clamp(22.1px, calc(-1.2443vw + 34.89px), 25.3px);
+    padding-left: 24px;
+  }
+
+  .search_bar {
+    max-width: 380px;
+  }
+}
+
+/*==========================================
+        Экраны от 425px до 767px
+============================================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  /*==========================================
+        HEADER
+============================================*/
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: clamp(4.1px, calc(0.4584vw + 2.198px), 5.7px);
+    padding-right: clamp(7.9px, calc(2.816vw - 4.067px), 17.6px);
+    padding-bottom: clamp(25.3px, calc(-1.2443vw + 34.89px), 29.6px);
+    padding-left: 24px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .navigation {
+    gap: 9px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .search_bar {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: none;
+  }
+
+  .search_left {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .search_right {
+    display: flex;
+    flex: 0 0 36px;
+    width: 36px;
+    min-width: 36px;
+  }
+
+  .search_right > input {
+    display: none;
+  }
+
+  .search_right_btn {
+    position: static;
+    width: 36px;
+    height: 100%;
+    background-color: #f65858;
+  }
+
+  .language_selection,
+  .login_btn,
+  .signup_btn {
+    font-size: 11px;
+  }
+
+  .globe_icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .signup_btn {
+    padding: 6px 9px;
+  }
+}
+
+/*==========================================
+        Экраны от 393px до 424px
+============================================*/
+@media (min-width: 393px) and (max-width: 424px) {
+  /*==========================================
+        HEADER
+============================================*/
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 9px;
+    padding-top: clamp(4px, calc(0.4584vw + 2.198px), 4.1px);
+    padding-right: clamp(7px, calc(2.816vw - 4.067px), 7.9px);
+    padding-bottom: clamp(29.6px, calc(-1.2443vw + 34.89px), 30px);
+    padding-left: 24px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .navigation {
+    gap: 7px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .search_bar {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: none;
+  }
+
+  .search_left {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .search_left > input {
+    min-width: 0;
+    width: 100%;
+    padding: 9px 8px 9px 36px;
+    font-size: 12px;
+  }
+
+  .search_right {
+    display: flex;
+    flex: 0 0 34px;
+    width: 34px;
+    min-width: 34px;
+  }
+
+  .search_right > input {
+    display: none;
+  }
+
+  .search_right_btn {
+    position: static;
+    width: 42px;
+    height: 100%;
+    background-color: #f65858;
+  }
+
+  .language_selection,
+  .login_btn,
+  .signup_btn {
+    font-size: 10px;
+  }
+
+  .globe_icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup_btn {
+    padding: 6px 8px;
+  }
 }
